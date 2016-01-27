@@ -15,17 +15,23 @@ A promise shell.
 ## Usage
 
 ```js
-var prosh = require('prosh')
+import prosh from 'prosh'
+import co from 'co'
+
+co(function * () {
+  yield prosh('echo "hello world"')
+})
 
 ```
 
 ## API
 
-### prosh(arg)
+### prosh(command, capture)
 
-- `arg` -
+- `command` - command string the same way you would write it in a shell
+- `capture` - turns on stdout and stderr capturing
 
-**Returns:**
+**Returns:** a promise the resolves stdout if captured, otherwise just resolves on exit
 
 ## License
 
