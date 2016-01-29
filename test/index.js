@@ -16,6 +16,13 @@ test('should echo and consume', (t) => {
   })
 })
 
+test('should multi line echo and consume', (t) => {
+  prosh('echo "hello world"\necho "hello world"', true).then((stdout) => {
+    t.equal(stdout, 'hello world\nhello world\n')
+    t.end()
+  })
+})
+
 test('should echo', (t) => {
   prosh('echo "hello world"').then(stdout => {
     t.equal(stdout, '')

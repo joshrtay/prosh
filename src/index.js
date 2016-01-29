@@ -2,7 +2,6 @@
  * Imports
  */
 
-import {parse} from 'shell-quote'
 import {spawn} from 'child_process'
 
 /**
@@ -11,11 +10,7 @@ import {spawn} from 'child_process'
 
 function prosh (command, capture) {
   return new Promise(function (resolve, reject) {
-    let args = parse(command)
-    command = args[0]
-    args = args.slice(1)
-
-    let proc = spawn(command, args, {stdio: capture ? 'pipe' : 'inherit'})
+    let proc = spawn('/bin/sh', ['-c', command], {stdio: capture ? 'pipe' : 'inherit'})
     let stdout = ''
     let stderr = ''
 
