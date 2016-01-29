@@ -19,7 +19,10 @@ import prosh from 'prosh'
 import co from 'co'
 
 co(function * () {
-  yield prosh('echo "hello world"')
+  yield prosh(`
+    echo "hello world"
+    echo "hello world"
+    `)
 })
 
 ```
