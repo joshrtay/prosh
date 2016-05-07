@@ -3,7 +3,7 @@
  */
 
 const test = require('tape')
-const prosh = require('..')
+const prosh = require('../')
 
 /**
  * Tests
