@@ -2,8 +2,8 @@
  * Imports
  */
 
-import test from 'tape'
-import prosh from '../src'
+const test = require('tape')
+const prosh = require('..')
 
 /**
  * Tests
