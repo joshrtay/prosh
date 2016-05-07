@@ -6,9 +6,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "make build",
-    "postpublish": "make clean",
-    "postversion": "git push && git push --tags && npm publish --access=public"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {},
   "devDependencies": {
