@@ -13,10 +13,9 @@ const capture = true
 
 test('should echo and consume', (t) => {
   prosh('echo "hello world"', {capture}).then((stdout) => {
-    console.log('stdout', stdout)
     t.equal(stdout, 'hello world\n')
     t.end()
-  })
+  }).catch(err => console.log('error', err))
 })
 
 test('should multi line echo and consume', (t) => {
