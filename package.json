@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@f/assign": "^1.2.1",
+    "@f/extend": "^1.0.0",
     "co": "^4.6.0",
     "find-mod": "^1.0.0"
   },

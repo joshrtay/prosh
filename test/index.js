@@ -31,3 +31,11 @@ test('should echo', (t) => {
     t.end()
   })
 })
+
+test('should get environment variables', (t) => {
+  process.env.SECRET = 'hello-world'
+  prosh('echo $SECRET', {capture}).then(stdout => {
+    t.equal(stdout, 'hello-world\n')
+    t.end()
+  })
+})
