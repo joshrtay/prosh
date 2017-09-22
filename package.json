@@ -2,7 +2,7 @@
   "name": "prosh",
   "description": "A promise shell.",
   "repository": "git://github.com/joshrtay/prosh.git",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
