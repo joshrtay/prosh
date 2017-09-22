@@ -29,12 +29,11 @@ co(function * () {
 
 ## API
 
-### prosh(command, capture)
+### prosh(command)
 
 - `command` - command string the same way you would write it in a shell
-- `capture` - turns on stdout and stderr capturing
 
-**Returns:** a promise the resolves stdout if captured, otherwise just resolves on exit
+**Returns:** a promise the resolves {code, output, time}, where `code` is exit code, `output` is stdout and stderr and `time` is run time
 
 ## License
 
